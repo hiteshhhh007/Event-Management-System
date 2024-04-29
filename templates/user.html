@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Details Form</title>
+  <style>
+    /* Background with a subtle gradient */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      /* Ensure the form is centered on screen */
+      overflow: hidden;
+    }
+
+    /* Glassmorphism effect with padding and proper alignment */
+    .container {
+      backdrop-filter: blur(10px);
+      /* Glassmorphism blur */
+      background: rgba(255, 255, 255, 0.3);
+      /* Semi-transparent background */
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      /* Width for proper alignment */
+      width: 100%;
+      /* To ensure proper centering */
+      text-align: left;
+      /* Left-aligned text */
+      transition: all 0.3s ease;
+      /* Smooth transitions */
+    }
+
+    .container:hover {
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+      /* Enhanced shadow on hover */
+      transform: scale(1.05);
+      /* Scale effect */
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    /* Form input fields with transition and blur effect */
+    input[type="text"],
+    input[type="date"],
+    input[type="email"],
+    select {
+      width: 100%;
+      /* Ensure proper alignment */
+      padding: 12px;
+      /* Ample padding */
+      border-radius: 10px;
+      /* Rounded corners */
+      border: 1px solid #ccc;
+      transition: all 0.3s ease;
+      /* Smooth transitions */
+      background: rgba(255, 255, 255, 0.8);
+      /* Semi-transparent input */
+    }
+
+    input:focus {
+      border-color: #007bff;
+      /* Focus color */
+      outline: none;
+      /* No outline */
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+      /* Space for radio buttons */
+    }
+
+    .form-group-radio {
+      display: flex;
+      /* Horizontal alignment */
+      gap: 15px;
+      /* Space between radio options */
+    }
+
+    /* Submit button with transitions and hover effects */
+    input[type="submit"] {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      /* Gradient background */
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      /* Padding for button */
+      border-radius: 10px;
+      /* Rounded corners */
+      cursor: pointer;
+      /* Hand cursor */
+      transition: all 0.3s;
+      /* Smooth transitions */
+    }
+
+    input[type="submit"]:hover {
+      background: linear-gradient(135deg, #2575fc, #6a11cb);
+      /* Hover gradient */
+      transform: scale(1.1);
+      /* Hover scale effect */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      /* Hover shadow */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>User Details</h2>
+    <form method="post" action="/user">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+      <div class="form-group">
+        <label>Gender:</label>
+        <div class="form-group-radio">
+          <label><input type="radio" name="gender" value="Male" required> Male</label>
+          <label><input type="radio" name="gender" value="Female" required> Female</label>
+          <label><input type="radio" name="gender" value="Other" required> Other</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" required>
+      </div>
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+      </div>
+      <div class="form-group">
+        <label for="zipcode">Zipcode:</label>
+        <input type="text" id="zipcode" required>
+      </div>
+      <div class="form-group">
+        <label for="country">Country:</label>
+        <input type="text" id="country" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email id=" email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Submit" onclick="window.location.href = '/eventslive';">
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

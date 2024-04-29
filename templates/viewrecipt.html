@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <style>
+        /* Your existing CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("10651325.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .payment-details {
+            margin-top: 30px;
+        }
+
+        .payment-details label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .payment-details p {
+            margin-bottom: 10px;
+        }
+
+        .payment-details .payment-detail {
+            margin-bottom: 10px;
+        }
+
+        .payment-details select,
+        .payment-details input[type="submit"] {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+        }
+
+        .payment-details input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .payment-details input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Payment Details</h2>
+        <div class="payment-details">
+            <div class="payment-detail">
+                <label>Payment Amount:</label>
+                <p><span>${{ payment_amount }}</span></p>
+            </div>
+            <div class="payment-detail">
+                <label>Payment ID:</label>
+                <p><span>{{ payment_id }}</span></p>
+            </div>
+            <div class="payment-detail">
+                <label>Transaction ID:</label>
+                <p><span>{{ transaction_id }}</span></p>
+            </div>
+            <div class="payment-detail">
+                <label>Payment Date:</label>
+                <p><span>{{ payment_date }}</span></p>
+            </div>
+            <div class="payment-detail">
+                <label>Payment Method:</label>
+                <p><span>{{ payment_method }}</span></p>
+            </div>
+            <div class="payment-detail">
+                <label>Event Name:</label>
+                <p><span>{{ event_name }}</span></p>
+            </div>
+            <div class="payment-detail">
+                <label>Event ID:</label>
+                <p><span>{{ event_id }}</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

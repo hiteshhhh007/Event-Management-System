@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #1e3c72, #2a5298);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 100px auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      font-size: 24px;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .payment-info {
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+
+    .payment-info p {
+      margin: 10px 0;
+    }
+
+    .payment-methods {
+      margin-bottom: 20px;
+    }
+
+    .payment-methods label {
+      display: block;
+      text-align: left;
+      margin: 10px 0;
+    }
+
+    .payment-methods input {
+      margin-right: 10px;
+    }
+
+    .pay-now {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+
+    .pay-now:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Complete Your Payment</h2>
+    <div class="payment-info">
+      <p><strong>Payable Amount:</strong> $100.00</p>
+      <p><strong>Due Date:</strong> April 30, 2024</p>
+    </div>
+
+    <!-- Use a form to POST to /payment -->
+    <form action="/payment" method="post">
+      <div class="payment-methods">
+        <label>
+          <input type="radio" name="payment_method" value="credit_card" checked>
+          Credit Card
+        </label>
+        <label>
+          <input type="radio" name="payment_method" value="paypal">
+          PayPal
+        </label>
+        <label>
+          <input type="radio" name="payment_method" value="bank_transfer">
+          Bank Transfer
+        </label>
+        <label>
+          <input type="radio" name="payment_method" value="cash">
+          Cash
+        </label>
+      </div>
+
+      <!-- Submit the form to initiate payment -->
+      <button class="pay-now" type="submit">Pay Now</button>
+    </form>
+  </div>
+</body>
+
+</html>
+
+
+
+
+
+
